@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Know Your Rent </title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='house.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    </head>
+
+<body>
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><i class="fa fa-home"> Know Your Rent </i></h2>
+            <div class='description'>
+    			<p>A Machine Learning Web App, Built with Flask, Deployed using Heroku.</p>
+    		</div>
+        </div>
+
+    
+        <!-- Text Area -->
+    	<div class="ml-container">
+            <form action="{{ url_for('predict') }}" method="POST">
+
+                <div class="float-child">
+
+
+                    <div class="leftdiv">
+
+                        <div class="dropdown-content"> 
+
+                            <select class="form-dropdown" name="location" id="location">
+
+                                <option value=none>Choose a City</option>
+                                <option value="mumbai">Mumbai</option>
+                                <option value="delhi">Delhi</option>
+                                <option value="banglore">Banglore</option>
+                                <option value="chennai">Chennai</option>
+                                <option value="hyderabad">Hyderabad</option>
+                                <option value="pune">Pune</option>
+                                <option value="noida">Noida</option>
+                                <option value="faridabad">Faridabad</option>
+                                <option value="gurgaon">Gurgaon</option>
+                                <option value="ghaziabad">Ghaziabad</option>
+                            </select> <br>
+                            
+                            <input class="form-input" type="number" name="area" placeholder="Area in Sq. Ft."><br>
+
+                            <select class="form-dropdown" name="furnishing" id="furnishing">
+
+                                <option value=0>Furnishing</option>
+                                <option value=2>Fully Furnished</option>
+                                <option value=1>Semi Furnished</option>
+                                <option value=0>Unfurnished</option>
+
+                            </select> <br>
+
+
+                            <select class="form-dropdown" name="Facing" id="Facing">
+
+                                <option value="Don't Know">Facing</option>
+                                <option value="East">East</option>
+                                <option value="North">North</option>
+                                <option value="Don't Know">Don't Know</option>
+                                <option value="West">West</option>
+                                <option value="North-East">North-East</option>
+                                <option value="South">South</option>
+                                <option value="North-West">North-West</option>
+                                <option value="South-West">South-West</option>
+                                <option value="South-East">South-East</option>
+                            
+                            </select> <br>
+
+
+                            <select class="form-dropdown" name="Watersupply" id="Watersupply">
+
+                                <option value=none>Water Supply</option>
+                                <option value="Corporation">Corporation</option>
+                                <option value="Borewell">Borewell</option>
+                                <option value="Both">Both</option>
+
+                            </select> <br>
+
+
+                            <select class="form-dropdown" name="Balcony" id="Balcony">
+
+                                <option value=none>No of Balcony</option>
+                                <option value=1>1</option>
+                                <option value=2>2</option>
+                                <option value=3>3</option>
+                                <option value=4>4</option>
+        
+                            </select> <br>
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="float-child">
+                    <div class="rightdiv">
+                        <select class="form-dropdown" name="Bathroom" id="Bathroom">
+
+                            <option value=0>No of Bathroom</option>
+                            <option value=1>1</option>
+                            <option value=2>2</option>
+                            <option value=3>3</option>
+                            <option value=4>4</option>
+
+                        </select> <br>
+
+                        <select class="form-dropdown" name="Security" id="Security">
+
+                            <option value=0>Security</option>
+                            <option value=1>Yes</option>
+                            <option value=0>No</option>
+
+                        </select> <br>
+
+                        <select class="form-dropdown" name="Bedrooms" id="Bedrooms">
+
+                            <option value=0>No of Bedrooms</option>
+                            <option value=1>1</option>
+                            <option value=2>2</option>
+                            <option value=3>3</option>
+                            <option value=4>4</option>
+
+                        </select> <br>
+
+                        
+                        <select class="form-dropdown" name="Type" id="Type">
+
+                            <option value=none>Type</option>
+                            <option value="Apartment">Apartment</option>
+                            <option value="Independent House/villa">Villa</option>
+                            <option value="Gated Community">Gated Community</option>
+                            <option value="Independent Floor/builder Floor">Independent Floor</option>
+
+                        </select> <br>
+
+
+                        <select class="form-dropdown" name="Parking" id="Parking">
+
+                            <option value=0>Parking</option>
+                            <option value=3>Bike and Car</option>
+                            <option value=0>None</option>
+                            <option value=2>Car</option>
+                            <option value=1>Bike</option>
+
+                        </select> <br>
+
+
+                        <select class="form-dropdown" name="Age of Building" id="Age of Building">
+
+                            <option value=0>Age of Building</option>
+                            <option value=4>1-3 Years</option>
+                            <option value=3>3-5 Years</option>
+                            <option value=2>5-10 Years</option>
+                            <option value=1>More 10 Years</option>
+                            <option value=5>Newly Constructed</option>
+                            <option value=0>Under Construction</option>
+
+
+                        </select> <br>
+
+
+                        
+                    </div>
+                    <div class="btn">
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <center><input type="submit" class="myButton" value="Know Your Rent"></center>
+                    </div>
+
+                </div>
+
+                
+        </form>
+           
+        </div>
+
+        
+
+
+        <!-- Footer -->
+        <div class='footer'>
+            <div class="contact">
+                <a target="_blank" href="https://github.com/d4deva"><i class="fab fa-github fa-lg contact-icon"></i></a>
+                <a target="_blank" href="https://www.linkedin.com/in/d4dev/"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+            </div>
+            <p class='footer-description'>Made with ❤️ by Debashis Das.</p>
+        </div>
+
+                    
+
+
+        
+
+    </body>
+</html>
